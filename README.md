@@ -2,11 +2,11 @@
 A matlab dataset of various tests of inertial and magnetic sensors using an industrial robot as ground-truth.
 
 # Considerations of the dataset and tests
-This repository intents to make available a dataset collected during an evaluation phase of a few fusion algorithms. 
+This repository intends to make available a dataset collected during an evaluation phase of a few fusion algorithms. 
 
-Comparing the performance of fusion algorithms in a harsh dynamic environment with no prior knowledge of the magnetic field disturbances or linear accelerations caused by motion against some reference sensors available on the market.
+Allowing to compare the performance of fusion algorithms in a harsh dynamic environment with no prior knowledge of the magnetic field disturbances or linear accelerations caused by motion against some reference sensors available on the market.
 
-The tests were carried out using an industrial robot that could retrieve the MARG unit orientation at 15 Hz, establishing the ground-truth. 
+The tests were carried out using an industrial robot that could retrieve the IMU unit orientation and position at 15 Hz, establishing the ground-truth. 
 
 All sensors signals were sampled at 100 Hz and interfaced to a PC via a custom wireless protocol between two MRF24J40 Microchip modules.
 
