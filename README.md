@@ -21,16 +21,19 @@ The tests were performed over 4 different paths at 6 different velocities with 8
 - 800  mm/s
 - 1000 mm/s
 - 1500 mm/s
+
 4 different paths:  
 - path1 (yaw rotation - pitch rotation roll - rotation)
-- path2 (Sequencia2)
-- path3 (Sequencia3)
-- path4 (Sequencia4)
+- path2 (linear movements)
+- path3 (complex rotations)
+- path4 (complex rotations)
+
 4 sensors retrieving raw data: 
 - LSM9DS0 (gyro+acc+mag) 100Hz
 - MPU9150 (gyro+acc+mag) 100Hz
 - MPU6500 + RM3100 (gyro+acc+mag) 100Hz
 - MPU6050 + RM3100(gyro+acc+mag) 100Hz
+
 4 reference sensors retrieving orientation: 
 - PNI SENTRAL M&M Blue (gyro+acc+mag) 100Hz
 - XSENS MTi-30 (gyro+acc+mag) 100Hz
