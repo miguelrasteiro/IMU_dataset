@@ -23,7 +23,7 @@ The tests were performed over 4 different paths at 6 different velocities with 8
 - 1500 mm/s
 
 4 different paths:  
-- path1 (yaw rotation - pitch rotation roll - rotation)
+- path1 (yaw rotation - pitch rotation - roll rotation)
 - path2 (linear movements)
 - path3 (complex rotations)
 - path4 (complex rotations)
