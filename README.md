@@ -10,12 +10,12 @@ The tests were carried out using an industrial robot that could retrieve the IMU
 
 All sensors signals were sampled at 100 Hz and interfaced to a PC via a custom wireless protocol between two MRF24J40 Microchip modules.
 
-Both signals were sincronized in matlab time.
+Both signals were synchronized in matlab time.
 
 The tests were performed over 4 different paths at 6 different velocities with 8 different sensors. Run TestScript.m for more details.
 
 6 different velocities: 
-- 150  mm/s aka safe mode 
+- 150  mm/s (safe mode) 
 - 300  mm/s
 - 500  mm/s
 - 800  mm/s
