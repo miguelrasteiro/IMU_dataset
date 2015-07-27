@@ -46,7 +46,6 @@ Reference sensors/algorithms used:
 - XSENS MTi-30 series runs a proprietary XSens Kalman Filter; 
 - MPU6500DMP and MPU6050DMP run an Invensense MotionFusion
 Algorithm (IMFA) with 6-axes (no usage of magnetometer data) integration.
-The tests were performed with four different sets of sensors:
 
 Tested sensors:
 - 9-axes integrated MPU9150 from Invensense; 
