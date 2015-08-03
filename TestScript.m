@@ -1,20 +1,42 @@
-%% ___________Dataset Example Script Usage_________ %%
-%                                                    %
-% Author: Miguel Rasteiro                            %
-% Local : Escola Superior Tecnologia e Gestão - IPL  %
-% Date  : July 2015                                  %
-%                                                    %
-% This script intents to facilitate the usage of     %
-% the dataset collected using an industrial robot    %
-% and a set of IMU/MARG sensors retrieving raw data. %
-%                                                    %
-% Can be used to test filter fusion algorithms for   %
-% orientation and position estimate.                 %
-%                                                    %
-% Data was collected in an non-perfect environment   %
-% with many unmodelled magnetic distortions and      %
-% accelerations.                                     %
-%____________________________________________________%
+
+%--------------------------------------------------------------------------
+%           ___________Dataset Example Script Usage_________
+%                        Copyright (C) 2010-2013
+%
+%--------------------------------------------------------------------------
+% This script intents to facilitate the usage of a dataset collected using 
+% an industrial robot and a set of IMU/MARG sensors retrieving raw data.
+%                                                  
+% Can be used to test filter fusion algorithms for orientation and position
+% estimate.
+%                                                    
+% Data was collected in an non-perfect environment with many unmodelled 
+% magnetic distortions and accelerations.       
+%
+% https://github.com/miguelrasteiro/IMU_dataset
+%
+%-DESCRIPTION--------------------------------------------------------------
+%
+% Simulation Run (main cycle)
+%
+%-DISCLAIMER---------------------------------------------------------------
+% This program is distributed in the hope that it will be useful,but
+% WITHOUT ANY WARRANTY;
+% without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+% A PARTICULAR PURPOSE.
+% You can use this source code without licensing fees only for
+% NON-COMMERCIAL research and EDUCATIONAL purposes only.
+% You cannot repost this file without prior written permission from 
+% the authors.
+%
+%-AUTHORS------------------------------------------------------------------
+%   Miguel Rasteiro*
+%   Luis Conde Bento*
+%   Hugo Costelha*
+%   Pedro Assunção*
+%
+% *School of Technology and Management - Polytechnic Institute of Leiria
+%--------------------------------------------------------------------------
 
 clear all;
 close all;
@@ -32,7 +54,7 @@ addpath ('quaternion_library');
 %                            -> 1000 mm/s (V1000)
 %                            -> 1500 mm/s (V1500)
 %    4 different paths: -> path1 (Sequencia1)
-%                       -> path2 (Sequencia2) - for position (not executed for all senssors)
+%                       -> path2 (Sequencia2) - for position (not available for all senssors)
 %                       -> path3 (Sequencia3)
 %                       -> path4 (Sequencia4)
 %            Note: increasing complexity in rotations and dislocations
@@ -121,14 +143,14 @@ end
 % Merely exemplificative
 
 % align initial orientation with ground-truth
-Qt=quatmultiply(SENTRAL.ABBquaternion(:,10)',quatconj(SENTRAL.SENSquat(:,10)'));
-SENTRAL.SENSquat=quatmultiply(SENTRAL.SENSquat',Qt);
+Qt=quaternProd(SENTRAL.ABBquaternion(:,10)',quaternConj(SENTRAL.SENSquat(:,10)'));
+SENTRAL.SENSquat=quaternProd(SENTRAL.SENSquat',Qt);
 
-Qt=quatmultiply(XSENS.ABBquaternion(:,10)',quatconj(XSENS.SENSquat(:,10)'));
-XSENS.SENSquat=quatmultiply(XSENS.SENSquat',Qt);
+Qt=quaternProd(XSENS.ABBquaternion(:,10)',quaternConj(XSENS.SENSquat(:,10)'));
+XSENS.SENSquat=quaternProd(XSENS.SENSquat',Qt);
 
-Qt = quatmultiply(MPU9150.ABBquaternion(:,5)',quatconj(MPU9150.quat(5,:)));
-MPU9150.quat = quatmultiply(MPU9150.quat,Qt);
+Qt = quaternProd(MPU9150.ABBquaternion(:,5)',quaternConj(MPU9150.quat(5,:)));
+MPU9150.quat = quaternProd(MPU9150.quat,Qt);
     
 % Compatibilize with industrial robot data 
 % ABB's real component of the retrieved quaternion is never negative, 
@@ -147,7 +169,7 @@ for i=1:length(XSENS.SENSquat)
     end
 end
 % MPU example
-MPU9150.quat = quatconj(MPU9150.quat); 
+MPU9150.quat = quaternConj(MPU9150.quat); 
 for i=1:length(MPU9150.quat)
     if MPU9150.quat(i,1)<0
         MPU9150.quat(i,:)=MPU9150.quat(i,:)*(-1);
@@ -155,7 +177,7 @@ for i=1:length(MPU9150.quat)
 end
 % transpose ()
 MPU9150.quat = MPU9150.quat';
-SENTRAL.SENSquat = quatconj(SENTRAL.SENSquat);
+SENTRAL.SENSquat = quaternConj(SENTRAL.SENSquat);
 SENTRAL.SENSquat = SENTRAL.SENSquat';
 XSENS.SENSquat = XSENS.SENSquat';
 
