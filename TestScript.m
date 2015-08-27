@@ -1,7 +1,7 @@
 
 %--------------------------------------------------------------------------
 %           ___________Dataset Example Script Usage_________
-%                        Copyright (C) 2010-2013
+%                        Copyright (C) 2013-2015
 %
 %--------------------------------------------------------------------------
 % This script intents to facilitate the usage of a dataset collected using 
@@ -14,6 +14,24 @@
 % magnetic distortions and accelerations.       
 %
 % https://github.com/miguelrasteiro/IMU_dataset
+%
+%-CITATION--------------------------------------------------------------------------
+% If you use this software please cite one of the following papers:
+% 1) Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; Assuncao, Pedro, 
+% "Accuracy versus complexity of MARG-based filters for remote control pointing 
+% devices", in Consumer Electronics - Taiwan (ICCE-TW), 2015 IEEE International 
+% Conference on, pp.51-52, 6-8 June 2015
+% 2)Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; Assuncao, Pedro,
+% "Low-complexity MARG Algorithms for Increased Accuracy in Space Pointing Devices",
+% in IEEE CE Workshop, March 11, 2015 Novi Sad, Serbia
+% 3) Santos, Ricardo; Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; 
+% ÒAssuncao, Pedro, "Motion-based Remote Control Device for Enhanced Interaction 
+% with 3D Multimedia Contents", in Conference on Telecommunications (Conftele 2015),
+% 17-18 September, 2015, Aveiro, Portugal
+%
+%-ACKNOWLEDGEMENTS-------------------------------------------------------------
+% This work was developed within project HERMES, co-financed by European Union, 
+% COMPETE, QREN and Fundo Europeu de Desenvolvimento Regional (FEDER).
 %
 %-DESCRIPTION--------------------------------------------------------------
 %
@@ -33,7 +51,7 @@
 %   Miguel Rasteiro*
 %   Luis Conde Bento*
 %   Hugo Costelha*
-%   Pedro Assunção*
+%   Pedro Assuncao*
 %
 % *School of Technology and Management - Polytechnic Institute of Leiria
 %--------------------------------------------------------------------------
