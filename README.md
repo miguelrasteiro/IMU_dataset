@@ -58,7 +58,7 @@ Tested sensors:
  
  1) Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; Assuncao, Pedro, ”Accuracy versus complexity of MARG-based filters for remote control pointing devices," in Consumer Electronics - Taiwan (ICCE-TW), 2015 IEEE International Conference on, pp.51-52, 6-8 June 2015
  
-2)Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; Assuncao, Pedro, ”Low-complexity MARG Algorithms for Increased Accuracy in Space Pointing Devices”,in IEEE CE Workshop, March 11, 2015 Novi Sad, Serbia
+2) Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; Assuncao, Pedro, ”Low-complexity MARG Algorithms for Increased Accuracy in Space Pointing Devices”,in IEEE CE Workshop, March 11, 2015 Novi Sad, Serbia
 
 3) Santos, Ricardo; Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; “Assuncao, Pedro, Motion-based Remote Control Device for EnhancedInteraction with 3D Multimedia Content”, in Conference on Telecommunications (Conftele 2015), 17-18 September, 2015, Aveiro, Portugal
 

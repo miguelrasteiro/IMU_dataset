@@ -25,7 +25,7 @@
 % "Low-complexity MARG Algorithms for Increased Accuracy in Space Pointing Devices",
 % in IEEE CE Workshop, March 11, 2015 Novi Sad, Serbia
 % 3) Santos, Ricardo; Rasteiro, Miguel; Costelha, Hugo; Bento, Luis; 
-% ÒAssuncao, Pedro, "Motion-based Remote Control Device for Enhanced Interaction 
+% Assuncao, Pedro, "Motion-based Remote Control Device for Enhanced Interaction 
 % with 3D Multimedia Contents", in Conference on Telecommunications (Conftele 2015),
 % 17-18 September, 2015, Aveiro, Portugal
 %
