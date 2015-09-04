@@ -1,5 +1,5 @@
 # IMU_dataset
-A matlab dataset of various tests of inertial and magnetic sensors using an industrial robot as ground-truth.
+A matlab dataset of various tests of inertial and magnetic sensors using an industrial robot as ground-truth, developed @ Instituto Politécnico de Leiria, Escola Superior de Tecnologia e Gestão.
 
 # Considerations of the dataset and tests
 This repository intends to make available a dataset collected during an evaluation phase of a few fusion algorithms. 
